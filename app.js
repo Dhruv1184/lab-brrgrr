@@ -12,7 +12,7 @@ var wholeWheatBun = 10;
 var Ingredient = {
   Patty: 80,
   Cheese: 10,
-  Tomato: 20,
+  Tomatoes: 20,
   Onions: 20,
   Lettuce: 20
 };
@@ -22,7 +22,7 @@ var Ingredient = {
 var state = {
   Patty: true,
   Cheese: true,
-  Tomato: true,
+  Tomatoes: true,
   Onions: true,
   Lettuce: true
 };
@@ -32,7 +32,7 @@ var state = {
 function renderAll() {
   renderPatty();
   renderCheese();
-  renderTomato();
+  renderTomatoes();
   renderOnions();
   renderLettuce();
   renderButtons();
@@ -53,7 +53,6 @@ function renderPatty() {
 }
 
 function renderCheese() {
-
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
 
   let cheese = document.querySelector("#cheese");
@@ -64,15 +63,15 @@ function renderCheese() {
   }
 }
 
-function renderTomato() {
+function renderTomatoes() {
 
-  //Trial 1 - Change the visibility of Tomato based on state by manipulating the DOM
+  //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
 
-  let Tomato = document.querySelector("#tomato");
-  if(state.Tomato){
-    Tomato.style.display = "inherit"
+  let tomato = document.querySelector("#tomato");
+  if(state.Tomatoes){
+    tomato.style.display = "inherit"
   }else{
-    Tomato.style.display = "none"
+    tomato.style.display = "none"
   }
 }
 
@@ -112,10 +111,10 @@ document.querySelector(".btn-cheese").onclick = function(){
   renderAll();
 }
 
-// Trial 2 - Setup event listener for the Tomato button
+// Trial 2 - Setup event listener for the Tomatoes button
 
-document.querySelector(".btn-Tomato").onclick = function(){
-  state.Tomato = !state.Tomato;
+document.querySelector(".btn-tomatoes").onclick = function(){
+  state.Tomatoes = !state.Tomatoes;
   renderAll();
 }
 
